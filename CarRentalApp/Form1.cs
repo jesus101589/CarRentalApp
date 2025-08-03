@@ -39,16 +39,50 @@ namespace CarRentalApp
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            string customerName = txtboxCustomerName.Text;
-            string dateOut = dtrented.Value.ToString();
-            string dateIn = dtreturned.Value.ToString();
-            var carType = cbTypeOfCar.SelectedItem.ToString();
+            try
+            {
+                string customerName = txtboxCustomerName.Text;
+                var dateOut = dtrented.Value;
+                var dateIn = dtreturned.Value;
+                double cost = Convert.ToDouble(tbCost.Text);
 
-            MessageBox.Show($"Customer Name: {customerName}\n\r" +
-                $"Date Rented: {dateOut}\n\r" +
-                $"Date Returned: {dateIn}\n\r" +
-                $"Car Type: {carType}\n\r" +
-                $"Thank You For Your Business!");
+                var carType = cbTypeOfCar.Text;
+                var isValid = true;
+                var errorMessage = "";
+
+                if (string.IsNullOrWhiteSpace(customerName) || string.IsNullOrWhiteSpace(carType))
+                {
+                    isValid = false;
+                    errorMessage += "Error: Please enter missing data\n\r";
+                }
+
+                if (dateOut > dateIn)
+                {
+                    isValid = false;
+                    errorMessage += "Error: Date Rented cannot be after Date Returned\n\r";
+                }
+
+                // if(isValid == true) below shows a cleaner way to write the if statement
+                if (isValid)
+                {
+                    MessageBox.Show($"Customer Name: {customerName}\n\r" +
+                        $"Date Rented: {dateOut}\n\r" +
+                        $"Date Returned: {dateIn}\n\r" +
+                        $"Cost: {cost}\n\r" +
+                        $"Car Type: {carType}\n\r" +
+                        $"Thank You For Your Business!");
+                }
+                else
+                {
+                    MessageBox.Show(errorMessage);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+                //throw;
+            }
+            
         }
     }
 }

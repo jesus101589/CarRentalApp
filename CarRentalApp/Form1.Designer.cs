@@ -38,6 +38,8 @@
             this.cbTypeOfCar = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.tbCost = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -77,7 +79,7 @@
             // 
             // dtreturned
             // 
-            this.dtreturned.Location = new System.Drawing.Point(497, 247);
+            this.dtreturned.Location = new System.Drawing.Point(479, 247);
             this.dtreturned.Name = "dtreturned";
             this.dtreturned.Size = new System.Drawing.Size(249, 20);
             this.dtreturned.TabIndex = 4;
@@ -132,7 +134,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Comic Sans MS", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(525, 293);
+            this.button1.Location = new System.Drawing.Point(574, 356);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(193, 51);
             this.button1.TabIndex = 9;
@@ -140,11 +142,30 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
+            // tbCost
+            // 
+            this.tbCost.Location = new System.Drawing.Point(479, 160);
+            this.tbCost.Name = "tbCost";
+            this.tbCost.Size = new System.Drawing.Size(249, 20);
+            this.tbCost.TabIndex = 10;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(475, 137);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(42, 20);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Cost";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.tbCost);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbTypeOfCar);
@@ -174,6 +195,8 @@
         private System.Windows.Forms.ComboBox cbTypeOfCar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox tbCost;
+        private System.Windows.Forms.Label label6;
     }
 }
 
