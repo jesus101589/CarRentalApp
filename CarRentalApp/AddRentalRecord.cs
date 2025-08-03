@@ -10,12 +10,15 @@ using System.Windows.Forms;
 
 namespace CarRentalApp
 {
-    public partial class Form1 : Form
+    public partial class AddRentalRecord : Form
     {
-        public Form1()
+        private readonly Car_RentalEntities2 car_RentalEntities2;
+        public AddRentalRecord()
         {
             InitializeComponent();
+            car_RentalEntities2 = new Car_RentalEntities2();
         }
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -65,6 +68,17 @@ namespace CarRentalApp
                 // if(isValid == true) below shows a cleaner way to write the if statement
                 if (isValid)
                 {
+                    var rentalRecord = new CarRentalRecord();
+                    rentalRecord.CustomerName = customerName;
+                    rentalRecord.DateRented = dateOut;
+                    rentalRecord.DateReturne = dateIn;
+                    rentalRecord.Cost = Convert.ToDecimal(cost);
+                    rentalRecord.TypeOfCarId = Convert.ToInt32(cbTypeOfCar.SelectedValue);
+                    
+                    car_RentalEntities2.CarRentalRecords.Add(rentalRecord);
+                    car_RentalEntities2.SaveChanges();
+
+
                     MessageBox.Show($"Customer Name: {customerName}\n\r" +
                         $"Date Rented: {dateOut}\n\r" +
                         $"Date Returned: {dateIn}\n\r" +
@@ -83,6 +97,21 @@ namespace CarRentalApp
                 //throw;
             }
             
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // Same as SQL: SELECT * FROM TypesOfCars
+            var cars = car_RentalEntities2.TypesOfCars.ToList();
+            cbTypeOfCar.DisplayMember = "Name"; // Display the Name property in the ComboBox
+            cbTypeOfCar.ValueMember = "id"; // Use the id property as the value
+            cbTypeOfCar.DataSource = cars; // Set the data source of the ComboBox to the list of cars
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var mainWindow = new MainWindow();
+            mainWindow.Show();
         }
     }
 }
