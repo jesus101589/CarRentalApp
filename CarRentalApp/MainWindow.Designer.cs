@@ -28,28 +28,76 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.viewArchiveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageRentalRecordsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editRentalRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addRentalRecordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageVehicleListingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // menuStrip1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(155, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(487, 101);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Main Window";
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manageVehicleListingToolStripMenuItem,
+            this.manageRentalRecordsToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1340, 33);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // viewArchiveToolStripMenuItem
+            // 
+            this.viewArchiveToolStripMenuItem.Name = "viewArchiveToolStripMenuItem";
+            this.viewArchiveToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.viewArchiveToolStripMenuItem.Text = "View Archive";
+            // 
+            // manageRentalRecordsToolStripMenuItem
+            // 
+            this.manageRentalRecordsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addRentalRecordToolStripMenuItem,
+            this.viewArchiveToolStripMenuItem,
+            this.editRentalRecordToolStripMenuItem});
+            this.manageRentalRecordsToolStripMenuItem.Name = "manageRentalRecordsToolStripMenuItem";
+            this.manageRentalRecordsToolStripMenuItem.Size = new System.Drawing.Size(213, 29);
+            this.manageRentalRecordsToolStripMenuItem.Text = "Manage Rental Records";
+            // 
+            // editRentalRecordToolStripMenuItem
+            // 
+            this.editRentalRecordToolStripMenuItem.Name = "editRentalRecordToolStripMenuItem";
+            this.editRentalRecordToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.editRentalRecordToolStripMenuItem.Text = "Edit Rental Record";
+            // 
+            // addRentalRecordToolStripMenuItem
+            // 
+            this.addRentalRecordToolStripMenuItem.Name = "addRentalRecordToolStripMenuItem";
+            this.addRentalRecordToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.addRentalRecordToolStripMenuItem.Text = "Add Rental Record";
+            this.addRentalRecordToolStripMenuItem.Click += new System.EventHandler(this.addRentalRecordToolStripMenuItem_Click);
+            // 
+            // manageVehicleListingToolStripMenuItem
+            // 
+            this.manageVehicleListingToolStripMenuItem.Name = "manageVehicleListingToolStripMenuItem";
+            this.manageVehicleListingToolStripMenuItem.Size = new System.Drawing.Size(207, 29);
+            this.manageVehicleListingToolStripMenuItem.Text = "Manage Vehicle Listing";
+            this.manageVehicleListingToolStripMenuItem.Click += new System.EventHandler(this.manageVehicleListingToolStripMenuItem_Click);
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1340, 673);
+            this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainWindow";
-            this.Text = "MainWindow";
+            this.Text = "Smokey\'s Car Rental Management System";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -57,6 +105,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem manageVehicleListingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manageRentalRecordsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addRentalRecordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewArchiveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editRentalRecordToolStripMenuItem;
     }
 }

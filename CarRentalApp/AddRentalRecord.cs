@@ -107,11 +107,5 @@ namespace CarRentalApp
             cbTypeOfCar.ValueMember = "id"; // Use the id property as the value
             cbTypeOfCar.DataSource = cars; // Set the data source of the ComboBox to the list of cars
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            var mainWindow = new MainWindow();
-            mainWindow.Show();
-        }
     }
 }
