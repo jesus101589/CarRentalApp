@@ -39,11 +39,11 @@
             // gvVehicleList
             // 
             this.gvVehicleList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvVehicleList.Location = new System.Drawing.Point(70, 129);
+            this.gvVehicleList.Location = new System.Drawing.Point(39, 129);
             this.gvVehicleList.Name = "gvVehicleList";
             this.gvVehicleList.RowHeadersWidth = 62;
             this.gvVehicleList.RowTemplate.Height = 28;
-            this.gvVehicleList.Size = new System.Drawing.Size(524, 354);
+            this.gvVehicleList.Size = new System.Drawing.Size(1024, 344);
             this.gvVehicleList.TabIndex = 0;
             // 
             // label1
@@ -59,7 +59,7 @@
             // 
             // btnAddCar
             // 
-            this.btnAddCar.Location = new System.Drawing.Point(664, 129);
+            this.btnAddCar.Location = new System.Drawing.Point(39, 532);
             this.btnAddCar.Name = "btnAddCar";
             this.btnAddCar.Size = new System.Drawing.Size(130, 59);
             this.btnAddCar.TabIndex = 2;
@@ -69,7 +69,7 @@
             // 
             // btnDeleteCar
             // 
-            this.btnDeleteCar.Location = new System.Drawing.Point(664, 424);
+            this.btnDeleteCar.Location = new System.Drawing.Point(469, 532);
             this.btnDeleteCar.Name = "btnDeleteCar";
             this.btnDeleteCar.Size = new System.Drawing.Size(130, 59);
             this.btnDeleteCar.TabIndex = 5;
@@ -79,7 +79,7 @@
             // 
             // btnEditCar
             // 
-            this.btnEditCar.Location = new System.Drawing.Point(664, 276);
+            this.btnEditCar.Location = new System.Drawing.Point(256, 532);
             this.btnEditCar.Name = "btnEditCar";
             this.btnEditCar.Size = new System.Drawing.Size(130, 59);
             this.btnEditCar.TabIndex = 4;
@@ -91,7 +91,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1126, 539);
+            this.ClientSize = new System.Drawing.Size(1263, 686);
             this.Controls.Add(this.btnDeleteCar);
             this.Controls.Add(this.btnEditCar);
             this.Controls.Add(this.btnAddCar);

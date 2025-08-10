@@ -117,7 +117,7 @@
             // 
             this.cbTypeOfCar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTypeOfCar.FormattingEnabled = true;
-            this.cbTypeOfCar.Location = new System.Drawing.Point(18, 486);
+            this.cbTypeOfCar.Location = new System.Drawing.Point(13, 486);
             this.cbTypeOfCar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbTypeOfCar.Name = "cbTypeOfCar";
             this.cbTypeOfCar.Size = new System.Drawing.Size(298, 28);
@@ -170,7 +170,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 692);
+            this.ClientSize = new System.Drawing.Size(1200, 791);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tbCost);
             this.Controls.Add(this.button1);

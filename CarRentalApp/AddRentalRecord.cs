@@ -102,9 +102,11 @@ namespace CarRentalApp
         private void Form1_Load(object sender, EventArgs e)
         {
             // Same as SQL: SELECT * FROM TypesOfCars
-            var cars = car_RentalEntities2.TypesOfCars.ToList();
+            //var cars = car_RentalEntities2.TypesOfCars.ToList();
+            var cars = car_RentalEntities2.TypesOfCars
+                .Select(q => new { Id = q.Id, Name = q.Make + " " + q.Model }).ToList();
             cbTypeOfCar.DisplayMember = "Name"; // Display the Name property in the ComboBox
-            cbTypeOfCar.ValueMember = "id"; // Use the id property as the value
+            cbTypeOfCar.ValueMember = "Id"; // Use the id property as the value
             cbTypeOfCar.DataSource = cars; // Set the data source of the ComboBox to the list of cars
         }
     }
