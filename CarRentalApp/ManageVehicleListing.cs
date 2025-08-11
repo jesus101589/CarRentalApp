@@ -26,6 +26,8 @@ namespace CarRentalApp
             //var cars = car_RentalEntities2.TypesOfCars.Select(q => new { carId = q.Id, CarName = q.Make }).ToList();
             var cars = car_RentalEntities2.TypesOfCars.Select(q => new { Make = q.Make, Model = q.Model, VIN = q.VIN, Year = q.Year, LicensePlateNumber = q.LicensePlateNumber, Id = q.Id }).ToList();
             gvVehicleList.DataSource = cars;
+            gvVehicleList.Columns[4].HeaderText = "License Plate Number";
+            gvVehicleList.Columns[5].Visible = false; // Hide the Id column
             //gvVehicleList.Columns[0].HeaderText = "ID";
             //gvVehicleList.Columns[1].HeaderText = "NAME";
         }
