@@ -15,6 +15,17 @@ namespace CarRentalApp
         public AddEditVehicle()
         {
             InitializeComponent();
+            lblTitle.Text = "Add New Vehicle";
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
