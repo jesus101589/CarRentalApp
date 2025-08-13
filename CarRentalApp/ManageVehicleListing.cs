@@ -34,17 +34,38 @@ namespace CarRentalApp
 
         private void btnAddCar_Click(object sender, EventArgs e)
         {
-
+            var addEditVehicle = new AddEditVehicle();
+            addEditVehicle.MdiParent = this.MdiParent;
+            addEditVehicle.Show();
         }
 
         private void btnEditCar_Click(object sender, EventArgs e)
         {
+            // get ID of selected row
+            var id = (int)gvVehicleList.SelectedRows[0].Cells["Id"].Value;
 
+            // Query the database for the car with that ID
+            var car = car_RentalEntities2.TypesOfCars.FirstOrDefault(q => q.Id == id);
+
+            //Launch the AddEditVehicle form with the car details
+            var addEditVehicle = new AddEditVehicle(car);
+            addEditVehicle.MdiParent = this.MdiParent;
+            addEditVehicle.Show();
         }
 
         private void btnDeleteCar_Click(object sender, EventArgs e)
         {
+            // get ID of selected row
+            var id = (int)gvVehicleList.SelectedRows[0].Cells["Id"].Value;
 
+            // Query the database for the car with that ID
+            var car = car_RentalEntities2.TypesOfCars.FirstOrDefault(q => q.Id == id);
+
+            // Delete the car from the database
+            car_RentalEntities2.TypesOfCars.Remove(car);
+            car_RentalEntities2.SaveChanges();
+
+            gvVehicleList.Refresh();
         }
     }
 }
