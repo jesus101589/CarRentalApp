@@ -33,6 +33,7 @@
             this.btnAddCar = new System.Windows.Forms.Button();
             this.btnDeleteCar = new System.Windows.Forms.Button();
             this.btnEditCar = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvVehicleList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,11 +88,22 @@
             this.btnEditCar.UseVisualStyleBackColor = true;
             this.btnEditCar.Click += new System.EventHandler(this.btnEditCar_Click);
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(711, 538);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(130, 53);
+            this.btnRefresh.TabIndex = 6;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // ManageVehicleListing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1447, 858);
+            this.ClientSize = new System.Drawing.Size(1129, 607);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnDeleteCar);
             this.Controls.Add(this.btnEditCar);
             this.Controls.Add(this.btnAddCar);
@@ -113,5 +125,6 @@
         private System.Windows.Forms.Button btnAddCar;
         private System.Windows.Forms.Button btnDeleteCar;
         private System.Windows.Forms.Button btnEditCar;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }
